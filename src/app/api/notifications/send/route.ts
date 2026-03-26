@@ -1,4 +1,4 @@
-# A2V Gym Management App
+A2V Fitnes
 
 Full-stack gym member management system built with **Next.js 14**, **Prisma**, **Tailwind**, **shadcn/ui**.
 
