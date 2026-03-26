@@ -993,7 +993,7 @@ gymPlan: "1 Month",
               <ThemeToggle />
               
               {/* WhatsApp Status - Local only */}
-              {isDev && (
+
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden sm:flex">
                   <Button 
                     variant="outline" 
@@ -1004,7 +1004,7 @@ gymPlan: "1 Month",
                     {whatsappStatus.connected ? (
                       <>
                         <Wifi className="w-4 h-4 mr-2 animate-pulse" />
-                        Connected
+                        WhatsApp Ready
                       </>
                     ) : whatsappStatus.status === 'qr' ? (
                       <>
@@ -1014,18 +1014,12 @@ gymPlan: "1 Month",
                     ) : (
                       <>
                         <WifiOff className="w-4 h-4 mr-2" />
-                        Connect Local
+                        WhatsApp Connect
                       </>
                     )}
                   </Button>
                 </motion.div>
-              )}
-              {!isDev && (
-                <div className="px-4 py-2 bg-slate-900/50 border border-slate-700/50 rounded-xl text-xs text-slate-500 flex items-center gap-2">
-                  <WifiOff className="w-4 h-4" />
-                  WhatsApp: Local only
-                </div>
-              )}
+
               
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden md:flex">
                 <Button 
