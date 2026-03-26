@@ -30,4 +30,3 @@ bun dev
 - GitHub: https://github.com/Lakshyaprajapat6990/gym-management-app
 
 **Auto-deploys** on git push!
-

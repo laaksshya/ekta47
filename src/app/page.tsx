@@ -992,32 +992,40 @@ gymPlan: "1 Month",
               {/* Theme Toggle */}
               <ThemeToggle />
               
-              {/* WhatsApp Status - Hide on mobile */}
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden sm:flex">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  onClick={() => setIsQRDialogOpen(true)}
-                  className={`backdrop-blur-sm border ${whatsappStatus.connected ? "border-lime-500/50 bg-lime-500/10 text-lime-400" : "border-cyan-500/30 bg-black/50 text-slate-400 hover:text-cyan-400"}`}
-                >
-                  {whatsappStatus.connected ? (
-                    <>
-                      <Wifi className="w-4 h-4 mr-2 animate-pulse" />
-                      Connected
-                    </>
-                  ) : whatsappStatus.status === 'qr' ? (
-                    <>
-                      <QrCode className="w-4 h-4 mr-2 text-amber-400" />
-                      Scan QR
-                    </>
-                  ) : (
-                    <>
-                      <WifiOff className="w-4 h-4 mr-2" />
-                      Connect
-                    </>
-                  )}
-                </Button>
-              </motion.div>
+              {/* WhatsApp Status - Local only */}
+              {isDev && (
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden sm:flex">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => setIsQRDialogOpen(true)}
+                    className={`backdrop-blur-sm border ${whatsappStatus.connected ? "border-lime-500/50 bg-lime-500/10 text-lime-400" : "border-cyan-500/30 bg-black/50 text-slate-400 hover:text-cyan-400"}`}
+                  >
+                    {whatsappStatus.connected ? (
+                      <>
+                        <Wifi className="w-4 h-4 mr-2 animate-pulse" />
+                        Connected
+                      </>
+                    ) : whatsappStatus.status === 'qr' ? (
+                      <>
+                        <QrCode className="w-4 h-4 mr-2 text-amber-400" />
+                        Scan QR
+                      </>
+                    ) : (
+                      <>
+                        <WifiOff className="w-4 h-4 mr-2" />
+                        Connect Local
+                      </>
+                    )}
+                  </Button>
+                </motion.div>
+              )}
+              {!isDev && (
+                <div className="px-4 py-2 bg-slate-900/50 border border-slate-700/50 rounded-xl text-xs text-slate-500 flex items-center gap-2">
+                  <WifiOff className="w-4 h-4" />
+                  WhatsApp: Local only
+                </div>
+              )}
               
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden md:flex">
                 <Button 
