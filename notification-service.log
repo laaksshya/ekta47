@@ -1,0 +1,7 @@
+$ bun --hot index.ts
+🚀 Notification Service started on port 3002
+📅 Scheduled to check for expiring memberships every hour
+[2026-03-22T14:59:10.216Z] Checking for expiring memberships...
+MongoDB: Using local mode (invalid or missing connection string)
+MongoDB not connected - skipping membership check (configure DATABASE_URL with valid connection string)
+error: script "dev" was terminated by signal SIGTERM (Polite quit request)

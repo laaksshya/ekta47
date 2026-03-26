@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model GymMember {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  name            String
+  email           String   @unique
+  contact         String
+  photo           String?  // URL or base64 encoded image
+  gymPlan         String   // e.g., "1 Month", "3 Months", "6 Months", "1 Year"
+  memberFees      Float?   // Manual fee entered by user
+  membershipStart DateTime @default(now())
+  membershipEnd   DateTime
+  whatsappNumber  String?  // For notifications
+  isActive        Boolean  @default(true)
+  notificationSent Boolean @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("gym_members")
+}
+
+model NotificationLog {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  memberId     String   @db.ObjectId
+  memberName   String
+  message      String
+  sentAt       DateTime @default(now())
+  status       String   // "sent", "failed"
+  type         String   // "whatsapp", "email"
+  
+  @@map("notification_logs")
+}

@@ -1,0 +1,714 @@
+==========================================
+[2026-03-15 10:55:03] Starting: bun install
+==========================================
+[BUN] Installing dependencies...
+[0.69ms] ".env"
+bun install v1.3.10 (30e609e0)
+
++ @tailwindcss/postcss@4.1.18
++ @types/react@19.2.8
++ @types/react-dom@19.2.3
++ bun-types@1.3.6
++ eslint@9.39.2
++ eslint-config-next@16.1.3
++ tailwindcss@4.1.18
++ tw-animate-css@1.4.0
++ typescript@5.9.3
++ @dnd-kit/core@6.3.1
++ @dnd-kit/sortable@10.0.0
++ @dnd-kit/utilities@3.2.2
++ @hookform/resolvers@5.2.2
++ @mdxeditor/editor@3.52.3
++ @prisma/client@6.19.2
++ @radix-ui/react-accordion@1.2.12
++ @radix-ui/react-alert-dialog@1.1.15
++ @radix-ui/react-aspect-ratio@1.1.8
++ @radix-ui/react-avatar@1.1.11
++ @radix-ui/react-checkbox@1.3.3
++ @radix-ui/react-collapsible@1.1.12
++ @radix-ui/react-context-menu@2.2.16
++ @radix-ui/react-dialog@1.1.15
++ @radix-ui/react-dropdown-menu@2.1.16
++ @radix-ui/react-hover-card@1.1.15
++ @radix-ui/react-label@2.1.8
++ @radix-ui/react-menubar@1.1.16
++ @radix-ui/react-navigation-menu@1.2.14
++ @radix-ui/react-popover@1.1.15
++ @radix-ui/react-progress@1.1.8
++ @radix-ui/react-radio-group@1.3.8
++ @radix-ui/react-scroll-area@1.2.10
++ @radix-ui/react-select@2.2.6
++ @radix-ui/react-separator@1.1.8
++ @radix-ui/react-slider@1.3.6
++ @radix-ui/react-slot@1.2.4
++ @radix-ui/react-switch@1.2.6
++ @radix-ui/react-tabs@1.1.13
++ @radix-ui/react-toast@1.2.15
++ @radix-ui/react-toggle@1.1.10
++ @radix-ui/react-toggle-group@1.1.11
++ @radix-ui/react-tooltip@1.2.8
++ @reactuses/core@6.1.9
++ @tanstack/react-query@5.90.19
++ @tanstack/react-table@8.21.3
++ class-variance-authority@0.7.1
++ clsx@2.1.1
++ cmdk@1.1.1
++ date-fns@4.1.0
++ embla-carousel-react@8.6.0
++ framer-motion@12.26.2
++ input-otp@1.4.2
++ lucide-react@0.525.0
++ next@16.1.3
++ next-auth@4.24.13
++ next-intl@4.7.0
++ next-themes@0.4.6
++ prisma@6.19.2
++ react@19.2.3
++ react-day-picker@9.13.0
++ react-dom@19.2.3
++ react-hook-form@7.71.1
++ react-markdown@10.1.0
++ react-resizable-panels@3.0.6
++ react-syntax-highlighter@15.6.6
++ recharts@2.15.4
++ sharp@0.34.5
++ sonner@2.0.7
++ tailwind-merge@3.4.0
++ tailwindcss-animate@1.0.7
++ uuid@11.1.0
++ vaul@1.1.2
++ z-ai-web-dev-sdk@0.0.17
++ zod@4.3.5
++ zustand@5.0.10
+
+827 packages installed [9.83s]
+==========================================
+[2026-03-15 10:55:13] Completed: bun install
+[LOG] Step: bun install | Duration: 10s
+==========================================
+
+==========================================
+[2026-03-15 10:55:13] Starting: bun run db:push
+==========================================
+[BUN] Setting up database...
+$ prisma db push
+Environment variables loaded from .env
+Prisma schema loaded from prisma/schema.prisma
+Datasource "db": SQLite database "custom.db" at "file:/home/z/my-project/db/custom.db"
+
+SQLite database custom.db created at file:/home/z/my-project/db/custom.db
+
+🚀  Your database is now in sync with your Prisma schema. Done in 13ms
+
+Running generate... (Use --skip-generate to skip the generators)
+[2K[1A[2K[GRunning generate... - Prisma Client
+[2K[1A[2K[G✔ Generated Prisma Client (v6.19.2) to ./node_modules/@prisma/client in 62ms
+┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.2 -> 7.5.0                       │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+==========================================
+[2026-03-15 10:55:14] Completed: bun run db:push
+[LOG] Step: bun run db:push | Duration: 1s
+==========================================
+
+==========================================
+[2026-03-15 10:55:14] Starting: Starting Next.js dev server
+==========================================
+[BUN] Starting development server...
+==========================================
+[2026-03-15 10:55:14] Completed: Starting Next.js dev server
+[LOG] Step: Starting Next.js dev server | Duration: 0s
+==========================================
+
+$ next dev -p 3000 2>&1 | tee dev.log
+==========================================
+[2026-03-15 10:55:14] Starting: Waiting for Next.js dev server
+==========================================
+Waiting for Next.js dev server to be ready on localhost:3000...
+Attempt 1/60: Next.js dev server not ready yet, waiting...
+▲ Next.js 16.1.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://21.0.2.166:3000
+- Environments: .env
+
+✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next/dev/types/**/*.ts'
+
+  The following mandatory changes were made to your tsconfig.json:
+
+  	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+
+✓ Ready in 748ms
+ GET / 200 in 2.6s (compile: 2.4s, render: 139ms)
+Next.js dev server is ready!
+==========================================
+ GET / 200 in 2.6s (compile: 2.4s, render: 207ms)
+[2026-03-15 10:55:18] Completed: Waiting for Next.js dev server
+[LOG] Step: Waiting for Next.js dev server | Duration: 4s
+==========================================
+
+==========================================
+[2026-03-15 10:55:18] Starting: Health check
+==========================================
+[BUN] Performing health check...
+ GET / 200 in 28ms (compile: 2ms, render: 25ms)
+[BUN] Health check passed
+==========================================
+[2026-03-15 10:55:18] Completed: Health check
+[LOG] Step: Health check | Duration: 0s
+==========================================
+
+==========================================
+[2026-03-15 10:55:18] Starting: Starting mini-services
+==========================================
+Found mini-services directory, scanning for sub-services...
+Mini-services startup completed. Started 0 service(s).
+==========================================
+[2026-03-15 10:55:18] Completed: Starting mini-services
+[LOG] Step: Starting mini-services | Duration: 0s
+==========================================
+
+Next.js dev server is running in background (PID: 326).
+Use 'kill 326' to stop it.
+ GET / 200 in 43ms (compile: 4ms, render: 38ms)
+  Reload env: .env
+ GET / 200 in 170ms (compile: 144ms, render: 25ms)
+ GET / 200 in 62ms (compile: 3ms, render: 59ms)
+ GET / 200 in 34ms (compile: 3ms, render: 31ms)
+ GET / 200 in 30ms (compile: 2ms, render: 28ms)
+ GET / 200 in 32ms (compile: 3ms, render: 29ms)
+ GET / 200 in 33ms (compile: 3ms, render: 30ms)
+ GET / 200 in 32ms (compile: 3ms, render: 30ms)
+ GET / 200 in 27ms (compile: 1813µs, render: 25ms)
+ GET / 200 in 32ms (compile: 2ms, render: 30ms)
+ GET / 200 in 29ms (compile: 1915µs, render: 27ms)
+✓ Compiled in 897ms
+ GET / 200 in 81ms (compile: 51ms, render: 30ms)
+⚠ Fast Refresh had to perform a full reload when ./src/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 172ms (compile: 2ms, render: 170ms)
+ GET /api/members 404 in 488ms (compile: 422ms, render: 66ms)
+ GET /api/members/stats 404 in 70ms (compile: 4ms, render: 66ms)
+ GET /api/members 404 in 70ms (compile: 28ms, render: 42ms)
+⚠ Cross origin request detected from preview-chat-330812ba-a31c-42bb-b204-4255127e3d17.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 82ms (compile: 50ms, render: 32ms)
+ GET / 200 in 26ms (compile: 3ms, render: 24ms)
+ GET / 200 in 17ms (compile: 2ms, render: 14ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET / 200 in 18ms (compile: 2ms, render: 16ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 17ms (compile: 2ms, render: 14ms)
+ GET / 200 in 80ms (compile: 49ms, render: 31ms)
+ GET / 200 in 31ms (compile: 2ms, render: 29ms)
+ GET / 200 in 17ms (compile: 2ms, render: 14ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 18ms (compile: 2ms, render: 15ms)
+ GET / 200 in 18ms (compile: 2ms, render: 16ms)
+ GET / 200 in 14ms (compile: 1961µs, render: 12ms)
+ GET / 200 in 16ms (compile: 1928µs, render: 14ms)
+ GET / 200 in 20ms (compile: 2ms, render: 18ms)
+ GET / 200 in 16ms (compile: 2ms, render: 14ms)
+ GET / 200 in 129ms (compile: 2ms, render: 127ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members/stats 500 in 1481ms (compile: 1355ms, render: 126ms)
+ GET /api/members 500 in 1485ms (compile: 1468ms, render: 17ms)
+ GET / 200 in 82ms (compile: 52ms, render: 30ms)
+ GET / 200 in 24ms (compile: 2ms, render: 21ms)
+ GET / 200 in 16ms (compile: 2ms, render: 14ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET / 200 in 18ms (compile: 2ms, render: 16ms)
+ GET / 200 in 14ms (compile: 2ms, render: 12ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET / 200 in 21ms (compile: 2ms, render: 19ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET / 200 in 148ms (compile: 2ms, render: 145ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+ GET /api/members 500 in 171ms (compile: 147ms, render: 24ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members/stats 500 in 177ms (compile: 170ms, render: 8ms)
+ GET / 200 in 54ms (compile: 2ms, render: 52ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+ GET /api/members/stats 500 in 97ms (compile: 80ms, render: 17ms)
+ GET /api/members 500 in 96ms (compile: 88ms, render: 8ms)
+ GET / 200 in 70ms (compile: 45ms, render: 25ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 14ms (compile: 2ms, render: 12ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 28ms (compile: 2ms, render: 26ms)
+ GET / 200 in 16ms (compile: 3ms, render: 13ms)
+ GET / 200 in 14ms (compile: 2ms, render: 12ms)
+ GET / 200 in 15ms (compile: 2ms, render: 12ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 16ms (compile: 2ms, render: 14ms)
+ GET / 200 in 15ms (compile: 2ms, render: 13ms)
+ GET / 200 in 16ms (compile: 2ms, render: 14ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+ GET / 200 in 164ms (compile: 3ms, render: 162ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members/stats 500 in 107ms (compile: 82ms, render: 25ms)
+ GET /api/members 500 in 227ms (compile: 218ms, render: 9ms)
+ GET / 200 in 59ms (compile: 3ms, render: 56ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members 500 in 119ms (compile: 106ms, render: 13ms)
+ GET /api/members/stats 500 in 65ms (compile: 58ms, render: 7ms)
+ GET / 200 in 55ms (compile: 2ms, render: 52ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members 500 in 86ms (compile: 76ms, render: 10ms)
+ GET /api/members/stats 500 in 54ms (compile: 47ms, render: 7ms)
+✓ Compiled in 186ms
+ GET / 200 in 89ms (compile: 54ms, render: 36ms)
+ GET / 200 in 153ms (compile: 5ms, render: 148ms)
+ GET / 200 in 17ms (compile: 2ms, render: 15ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members 500 in 118ms (compile: 101ms, render: 18ms)
+ GET /api/members/stats 500 in 129ms (compile: 120ms, render: 9ms)
+ GET / 200 in 59ms (compile: 3ms, render: 56ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members 500 in 117ms (compile: 104ms, render: 13ms)
+ GET /api/members/stats 500 in 66ms (compile: 58ms, render: 7ms)
+ GET / 200 in 63ms (compile: 2ms, render: 60ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+ GET /api/members/stats 500 in 87ms (compile: 78ms, render: 9ms)
+ GET /api/members 500 in 53ms (compile: 46ms, render: 7ms)
+ GET / 200 in 44ms (compile: 1932µs, render: 42ms)
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members'
+}
+⨯ MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at module evaluation (src/lib/mongodb.ts:21:14)
+    at module evaluation (src/app/api/members/route.ts:2:1)
+    at Object.<anonymous> (.next/dev/server/app/api/members/route.js:5:3)
+  19 |
+  20 |   if (!globalWithMongo._mongoClientPromise) {
+> 21 |     client = new MongoClient(uri, options)
+     |              ^
+  22 |     globalWithMongo._mongoClientPromise = client.connect()
+  23 |   }
+  24 |   clientPromise = globalWithMongo._mongoClientPromise {
+  page: '/api/members/stats'
+}
+ GET /api/members 500 in 87ms (compile: 43ms, render: 43ms)
+ GET /api/members/stats 500 in 53ms (compile: 47ms, render: 7ms)
+ GET / 200 in 41ms (compile: 1797µs, render: 39ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+Error fetching stats: TypeError: collection.find(...).toArray is not a function
+    at GET (src/app/api/members/stats/route.ts:40:8)
+  38 |       isActive: true,
+  39 |       membershipEnd: { $gt: new Date() }
+> 40 |     }).toArray()
+     |        ^
+  41 |     
+  42 |     let totalRevenue = 0
+  43 |     members.forEach(member => {
+ GET /api/members/stats 500 in 178ms (compile: 43ms, render: 135ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 211ms (compile: 201ms, render: 10ms)
+ GET / 200 in 59ms (compile: 3ms, render: 56ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+Error fetching stats: TypeError: collection.find(...).toArray is not a function
+    at GET (src/app/api/members/stats/route.ts:40:8)
+  38 |       isActive: true,
+  39 |       membershipEnd: { $gt: new Date() }
+> 40 |     }).toArray()
+     |        ^
+  41 |     
+  42 |     let totalRevenue = 0
+  43 |     members.forEach(member => {
+ GET /api/members/stats 500 in 108ms (compile: 2ms, render: 106ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 7ms (compile: 1980µs, render: 5ms)
+ GET / 200 in 49ms (compile: 2ms, render: 47ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+Error fetching stats: TypeError: collection.find(...).toArray is not a function
+    at GET (src/app/api/members/stats/route.ts:40:8)
+  38 |       isActive: true,
+  39 |       membershipEnd: { $gt: new Date() }
+> 40 |     }).toArray()
+     |        ^
+  41 |     
+  42 |     let totalRevenue = 0
+  43 |     members.forEach(member => {
+ GET /api/members/stats 500 in 119ms (compile: 2ms, render: 117ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 6ms (compile: 1691µs, render: 4ms)
+ GET / 200 in 47ms (compile: 2ms, render: 45ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 6ms (compile: 1958µs, render: 4ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+Error fetching stats: TypeError: collection.find(...).toArray is not a function
+    at GET (src/app/api/members/stats/route.ts:40:8)
+  38 |       isActive: true,
+  39 |       membershipEnd: { $gt: new Date() }
+> 40 |     }).toArray()
+     |        ^
+  41 |     
+  42 |     let totalRevenue = 0
+  43 |     members.forEach(member => {
+ GET /api/members/stats 500 in 86ms (compile: 6ms, render: 80ms)
+ GET / 200 in 44ms (compile: 1992µs, render: 42ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 28ms (compile: 23ms, render: 5ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 5ms (compile: 1550µs, render: 3ms)
+ GET / 200 in 67ms (compile: 4ms, render: 62ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 7ms (compile: 2ms, render: 4ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 5ms (compile: 2ms, render: 3ms)
+ GET / 200 in 53ms (compile: 1943µs, render: 51ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 5ms (compile: 1812µs, render: 3ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 5ms (compile: 1706µs, render: 4ms)
+ GET / 200 in 54ms (compile: 2ms, render: 52ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 5ms (compile: 1582µs, render: 3ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 4ms (compile: 1288µs, render: 3ms)
+ GET / 200 in 48ms (compile: 1994µs, render: 46ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 6ms (compile: 1622µs, render: 5ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 4ms (compile: 1157µs, render: 3ms)
+ GET / 200 in 87ms (compile: 3ms, render: 84ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 6ms (compile: 1944µs, render: 4ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 5ms (compile: 1396µs, render: 3ms)
+ GET / 200 in 51ms (compile: 2ms, render: 49ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 7ms (compile: 2ms, render: 5ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 5ms (compile: 1404µs, render: 4ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ POST /api/members 200 in 22ms (compile: 1805µs, render: 20ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 20ms (compile: 5ms, render: 15ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 23ms (compile: 5ms, render: 18ms)
+ GET / 200 in 53ms (compile: 1860µs, render: 52ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 6ms (compile: 1911µs, render: 4ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 22ms (compile: 1332µs, render: 21ms)
+ GET / 200 in 53ms (compile: 1850µs, render: 51ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members 200 in 53ms (compile: 1725µs, render: 51ms)
+MongoDB: Using local storage fallback (invalid or placeholder connection string)
+ GET /api/members/stats 200 in 12ms (compile: 3ms, render: 9ms)
+==========================================
+[2026-03-22 14:50:22] Starting: bun install
+==========================================
+[BUN] Installing dependencies...
+[0.03ms] ".env"
+bun install v1.3.10 (30e609e0)
+
+Checked 858 installs across 927 packages (no changes) [25.00ms]
+==========================================
+[2026-03-22 14:50:22] Completed: bun install
+[LOG] Step: bun install | Duration: 0s
+==========================================
+
+==========================================
+[2026-03-22 14:50:22] Starting: bun run db:push
+==========================================
+[BUN] Setting up database...
+$ prisma db push
+Failed to load config file "/home/z/my-project" as a TypeScript/JavaScript module. Error: Error: ENOTDIR: not a directory, lstat '/home/z/my-project/.config/prisma'
+error: script "db:push" exited with code 1
+==========================================
+[2026-03-23 09:36:36] Starting: bun install
+==========================================
+[BUN] Installing dependencies...
+[0.09ms] ".env"
+bun install v1.3.10 (30e609e0)
+
+Checked 858 installs across 927 packages (no changes) [39.00ms]
+==========================================
+[2026-03-23 09:36:36] Completed: bun install
+[LOG] Step: bun install | Duration: 0s
+==========================================
+
+==========================================
+[2026-03-23 09:36:36] Starting: bun run db:push
+==========================================
+[BUN] Setting up database...
+$ prisma db push
+Failed to load config file "/home/z/my-project" as a TypeScript/JavaScript module. Error: Error: ENOTDIR: not a directory, lstat '/home/z/my-project/.config/prisma'
+error: script "db:push" exited with code 1
+==========================================
+[2026-03-24 09:14:12] Starting: bun install
+==========================================
+[BUN] Installing dependencies...
+[0.08ms] ".env"
+bun install v1.3.10 (30e609e0)
+
+Checked 858 installs across 927 packages (no changes) [50.00ms]
+==========================================
+[2026-03-24 09:14:12] Completed: bun install
+[LOG] Step: bun install | Duration: 0s
+==========================================
+
+==========================================
+[2026-03-24 09:14:12] Starting: bun run db:push
+==========================================
+[BUN] Setting up database...
+$ prisma db push
+Failed to load config file "/home/z/my-project" as a TypeScript/JavaScript module. Error: Error: ENOTDIR: not a directory, lstat '/home/z/my-project/.config/prisma'
+error: script "db:push" exited with code 1
