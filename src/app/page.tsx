@@ -994,29 +994,16 @@ gymPlan: "1 Month",
               
               {/* WhatsApp Status - Local only */}
 
-                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden sm:flex">
+                  <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="hidden sm:flex">
                   <Button 
                     variant="outline" 
                     size="sm" 
                     onClick={() => setIsQRDialogOpen(true)}
-                    className={`backdrop-blur-sm border ${whatsappStatus.connected ? "border-lime-500/50 bg-lime-500/10 text-lime-400" : "border-cyan-500/30 bg-black/50 text-slate-400 hover:text-cyan-400"}`}
+                    disabled
+                    className="backdrop-blur-sm border-cyan-500/30 bg-black/50 text-slate-400 cursor-not-allowed opacity-50"
                   >
-                    {whatsappStatus.connected ? (
-                      <>
-                        <Wifi className="w-4 h-4 mr-2 animate-pulse" />
-                        WhatsApp Ready
-                      </>
-                    ) : whatsappStatus.status === 'qr' ? (
-                      <>
-                        <QrCode className="w-4 h-4 mr-2 text-amber-400" />
-                        Scan QR
-                      </>
-                    ) : (
-                      <>
-                        <WifiOff className="w-4 h-4 mr-2" />
-                        WhatsApp Connect
-                      </>
-                    )}
+                    <WifiOff className="w-4 h-4 mr-2" />
+                    WhatsApp (Local Only)
                   </Button>
                 </motion.div>
 
@@ -1563,7 +1550,17 @@ gymPlan: "1 Month",
           </DialogHeader>
           
           <div className="flex flex-col items-center gap-4 py-4">
-            {whatsappStatus.connected ? (
+            {whatsappStatus.status === 'service_unavailable' ? (
+              <div className="text-center">
+                <div className="w-64 h-64 mx-auto rounded-xl border border-slate-700 flex items-center justify-center bg-slate-800/50">
+                  <div className="text-center">
+                    <WifiOff className="w-12 h-12 text-slate-400 mx-auto mb-4" />
+                    <p className="text-slate-400 font-medium">WhatsApp Local Only</p>
+                    <p className="text-slate-500 text-sm mt-2">Run locally for WhatsApp features</p>
+                  </div>
+                </div>
+              </div>
+            ) : whatsappStatus.connected ? (
               <div className="text-center">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-lime-500/20 flex items-center justify-center border border-lime-500/50 shadow-[0_0_30px_rgba(0,255,0,0.3)]">
                   <CheckCircle2 className="w-12 h-12 text-lime-400" />

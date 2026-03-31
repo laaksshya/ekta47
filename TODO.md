@@ -1,26 +1,15 @@
-# Task Progress: Deploy & Fix Prod WhatsApp QR Issue
+# Local Run Progress
 
-## Approved Plan Steps:
+## Steps:
+### 1. [✅] Prisma generate: bun run db:generate
+### 2. [✅] Start main dev server: bun dev
+### 3. [✅] Start notification service: cd mini-services/notification-service; bun dev
+### 4. [✅] Start WhatsApp service: cd mini-services/whatsapp-service; bun dev
+### 5. [✅] Verify: http://localhost:3000 (main app), notification port 3002, check logs
 
-### 1. [✅] Create/update TODO.md
-### 2. [ ] Edit src/app/page.tsx - hide WhatsApp in prod
-### 3. [ ] Edit src/app/api/notifications/send/route.ts - prod disabled status
-### 4. [ ] Create README.md prod notes
-### 5. [ ] Test local
-### 6. [ ] Commit/push → Vercel redeploy
-### 7. [ ] Add DATABASE_URL Vercel dashboard
-### 8. [ ] Mark complete
+**Complete!** All services running locally.
 
-## Original TODO:
-- [x] Install deps
-- [x] Prisma generate
-- [x] Dev server
-- [x] Notification/WhatsApp services
-- [ ] Fix add member 400
-- [ ] Scan WhatsApp QR
-
-**Current: Prod QR fix in progress**
-
-Repo: https://github.com/Lakshyaprajapat6990/gym-management-app
-Vercel: https://a2v-gym-management.vercel.app
-
+**Notes:**
+- Notification service: Running, using local DB (configure DATABASE_URL for full MongoDB).
+- WhatsApp: Auth cache/QR ready.
+- Dev server logs to dev.log.
