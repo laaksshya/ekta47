@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "A2V FitnesGYM Management System",
+  title: "EKTA47GYM Management System",
   description: "Complete gym membership management with registration, tracking, and WhatsApp notifications",
   keywords: ["GYM", "Management", "Membership", "Fitness", "Registration"],
-  authors: [{ name: "A2V FitnesTeam" }],
+  authors: [{ name: "EKTA47GYMTeam" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "A2V FitnesGYM Management",
+    title: "EKTA47GYM Management",
     description: "Complete gym membership management system",
     type: "website",
   },

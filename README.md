@@ -1,4 +1,4 @@
-# A2V Gym Management App
+# EKTA47 Gym Management App
 
 Full-stack gym member management system built with **Next.js 14**, **Prisma**, **Tailwind**, **shadcn/ui**.
 
@@ -26,7 +26,7 @@ bun dev
 - Standalone build ready (`next.config.ts`)
 
 ## Deploy
-- Vercel: https://a2v-gym-management.vercel.app/
+- Vercel: https://EKTA47-gym-management.vercel.app/
 - GitHub: https://github.com/Lakshyaprajapat6990/gym-management-app
 
 **Auto-deploys** on git push!

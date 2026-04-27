@@ -69,7 +69,7 @@ async function checkExpiringMemberships() {
       const daysLeft = Math.ceil((new Date(member.membershipEnd).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
       
       const message = `
-🏋️ *A2V FitnesGYM - Membership Expiry Alert*
+🏋️ *EKTA47GYM - Membership Expiry Alert*
 
 Dear ${member.name},
 
@@ -83,7 +83,7 @@ Please renew your membership to continue enjoying our services.
 
 💪 Stay Fit, Stay Healthy!
 
-- A2V FitnesGYM Team
+- EKTA47GYM Team
       `.trim()
       
       // Log the notification

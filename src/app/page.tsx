@@ -980,7 +980,7 @@ gymPlan: "1 Month",
               <div>
                 <h1 className="text-2xl font-bold">
                   <span className="bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent">
-                    A2V Fitnes
+                    EKTA47GYM
                   </span>
                   <span className="text-white ml-1">GYM</span>
                 </h1>
