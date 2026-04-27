@@ -13,7 +13,7 @@ function generateWelcomeMessage(member: {
   membershipStart: Date
   membershipEnd: Date
 }): string {
-  return `🎉 *Welcome to EKTA47GYM!* 🏋️
+  return `🎉 *Welcome to EKTA47!* 🏋️
 
 Dear ${member.name},
 
@@ -35,7 +35,7 @@ We're thrilled to have you join our fitness family! 💪
 💪 Let's make every workout count!
 
 *Stay Fit, Stay Healthy!*
-— EKTA47GYM Team`
+— EKTA47 Team`
 }
 
 // Send message via WhatsApp service
