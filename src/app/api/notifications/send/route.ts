@@ -1,14 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { headers } from 'next/headers'
 import { getMembersCollection, getNotificationLogsCollection } from '@/lib/mongodb'
 
 // GET status endpoint for WhatsApp service
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url)
+    let searchParams: URLSearchParams
+    try {
+      searchParams = new URL(request.url).searchParams
+    } catch {
+      // Fallback for invalid URLs
+      searchParams = new URLSearchParams()
+    }
+    
     const status = searchParams.get('whatsapp')
     
     if (status === 'status') {
-      const host = headers().get('host') || ''
+      const headersList = headers()
+      const host = headersList.get('host') || ''
       const isLocal = host.includes('localhost') || host.includes('127.0.0.1')
       
       if (isLocal) {

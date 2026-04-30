@@ -929,11 +929,16 @@ gymPlan: "1 Month",
     setIsEditDialogOpen(true)
   }
 
-  const filteredMembers = members.filter(member => {
+const filteredMembers = members.filter(member => {
+    // Safely handle potentially null/undefined properties
+    const memberName = member.name || ''
+    const memberEmail = member.email || ''
+    const memberContact = member.contact || ''
+    
     const matchesSearch = 
-      member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      member.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      member.contact.includes(searchQuery)
+      memberName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      memberEmail.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      memberContact.includes(searchQuery)
     
     const matchesPlan = filterPlan === "all" || member.gymPlan === filterPlan
     
