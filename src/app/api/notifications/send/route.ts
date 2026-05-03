@@ -2,6 +2,18 @@ import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { getMembersCollection, getNotificationLogsCollection } from '@/lib/mongodb'
 
+// Helper function to check if request is local
+function isLocalRequest(request: NextRequest): boolean {
+  try {
+    const headersList = headers()
+    const host = headersList.get('host') || ''
+    return host.includes('localhost') || host.includes('127.0.0.1')
+  } catch {
+    // If headers() fails, assume it's not local
+    return false
+  }
+}
+
 // GET status endpoint for WhatsApp service
 export async function GET(request: NextRequest) {
   try {
@@ -16,29 +28,28 @@ export async function GET(request: NextRequest) {
     const status = searchParams.get('whatsapp')
     
     if (status === 'status') {
-      const headersList = headers()
-      const host = headersList.get('host') || ''
-      const isLocal = host.includes('localhost') || host.includes('127.0.0.1')
+      const local = isLocalRequest(request)
       
-      if (isLocal) {
+      if (local) {
         try {
           const response = await fetch('http://localhost:3004/status', {
             headers: {
               'Access-Control-Allow-Origin': '*'
-            }
+            },
+            signal: AbortSignal.timeout(3000)
           })
           const data = await response.json()
           return NextResponse.json(data)
         } catch {
-          // Fallback
+          // Fallback - local service not available
         }
       }
       
-      // Prod or fallback
+      // Prod or fallback - WhatsApp service not available in production
       return NextResponse.json({
         status: 'service_unavailable',
         connected: false,
-        error: 'WhatsApp available locally only'
+        error: 'WhatsApp service is only available when running locally'
       })
     }
     

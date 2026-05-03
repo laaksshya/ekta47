@@ -289,25 +289,25 @@ function MemberCard({
           </Badge>
         </div>
 
-        {/* Avatar & Info */}
+{/* Avatar & Info */}
         <div className="flex items-start gap-4 mb-5 relative z-10">
           <div className="relative">
             <Avatar className="w-16 h-16 ring-2 ring-cyan-500/30 ring-offset-2 ring-offset-black">
-              <AvatarImage src={member.photo || undefined} alt={member.name} />
+              <AvatarImage src={member.photo || undefined} alt={member.name || 'Member'} />
               <AvatarFallback className={`text-lg font-bold bg-gradient-to-br ${colors.avatar} text-white`}>
-                {member.name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)}
+                {(member.name || '').split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || '??'}
               </AvatarFallback>
             </Avatar>
             <span className={`absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full border-2 border-black ${colors.dot}`} />
           </div>
           
           <div className="flex-1 min-w-0 pr-20">
-            <h3 className="font-semibold text-white truncate text-lg">{member.name}</h3>
-            <p className="text-sm text-slate-400 truncate">{member.email}</p>
+            <h3 className="font-semibold text-white truncate text-lg">{member.name || 'Unknown'}</h3>
+            <p className="text-sm text-slate-400 truncate">{member.email || 'No email'}</p>
             <div className="flex items-center gap-2 mt-2">
                 <div className="flex items-center gap-1">
                   <Badge variant="secondary" className="text-xs bg-slate-800/50 text-cyan-400 border border-cyan-500/30">
-                    {member.gymPlan}
+                    {member.gymPlan || 'N/A'}
                   </Badge>
                   {member.memberFees && (
                     <Badge variant="outline" className="text-xs bg-slate-800/50 text-emerald-400 border-emerald-500/30">
@@ -346,15 +346,15 @@ function MemberCard({
             />
           </div>
           <div className="flex items-center justify-between text-xs text-slate-500">
-            <span>{format(new Date(member.membershipStart), "dd MMM yyyy")}</span>
-            <span>{format(new Date(member.membershipEnd), "dd MMM yyyy")}</span>
+            <span>{format(new Date(member.membershipStart || new Date()), "dd MMM yyyy")}</span>
+            <span>{format(new Date(member.membershipEnd || new Date()), "dd MMM yyyy")}</span>
           </div>
         </div>
 
         {/* Contact Info */}
         <div className="flex items-center gap-2 text-sm text-slate-400 mb-5 relative z-10">
           <Phone className="w-4 h-4 text-cyan-500" />
-          <span>{member.contact}</span>
+          <span>{member.contact || 'No contact'}</span>
         </div>
 
         {/* Actions */}
